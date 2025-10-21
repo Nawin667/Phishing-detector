@@ -265,10 +265,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-- **Author**: Your Name
-- **Email**: your.email@example.com
-- **LinkedIn**: [Your LinkedIn Profile]
-- **GitHub**: [Your GitHub Profile]
+- **Author**: Nawin Balakrishnan
+- **LinkedIn**: https://www.linkedin.com/in/nawinbs/
+
 
 ---
 
