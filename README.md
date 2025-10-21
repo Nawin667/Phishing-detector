@@ -5,10 +5,10 @@ A comprehensive machine learning system that detects phishing attempts in emails
 ## 🎯 Project Overview
 
 This project implements a sophisticated phishing detection system that achieves:
-- **100% Precision** (no false positives)
-- **94.39% Recall** (catches almost all phishing)
-- **19.08% Improvement** over baseline methods
-- **1,022 Engineered Features** for robust detection
+- **98.91% Precision** (excellent accuracy)
+- **92.86% Recall** (catches most phishing)
+- **17.52% Improvement** over baseline methods
+- **1,014 Engineered Features** for robust detection
 
 ## 🚀 Quick Start
 
@@ -20,8 +20,8 @@ This project implements a sophisticated phishing detection system that achieves:
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/phishing-detector-v2.git
-cd phishing-detector-v2
+git clone https://github.com/Nawin667/Phishing-detector.git
+cd Phishing-detector
 ```
 
 2. **Create virtual environment**
@@ -35,18 +35,19 @@ source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-## 🚀 Quick Start
-
-**Run the phishing detection system:**
+### Run the Complete System
 ```bash
 python src/phishing_detector.py
 ```
 
-**Features:**
-- ✅ Beginner-friendly code with clear explanations
-- ✅ Meets all resume requirements
-- ✅ Step-by-step implementation
-- ✅ Interactive examples and visualizations
+**This single script does everything:**
+- ✅ Loads and preprocesses data
+- ✅ Creates 1,014 features
+- ✅ Trains 3 ML models
+- ✅ Evaluates performance
+- ✅ Creates visualizations
+- ✅ Saves models
+- ✅ Tests with example texts
 
 ## 📊 Results
 
