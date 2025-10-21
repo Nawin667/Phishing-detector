@@ -168,18 +168,18 @@ The project generates comprehensive visualizations:
 
 ## 🎬 Live Demonstration
 
-Run the live demo to see the system in action:
+The live demonstration is built into the main script! When you run:
 
 ```bash
-python src/live_demo.py
+python src/phishing_detector.py
 ```
 
 **Demo Features:**
-- Tests 8 different message types
+- Tests 3 different message types
 - Shows real-time predictions
-- Displays confidence scores
-- Analyzes feature importance
-- Interactive mode for custom inputs
+- Interactive examples
+- Confidence scores
+- Complete ML pipeline demonstration
 
 ## 📊 Dataset Information
 
