@@ -58,12 +58,6 @@ python src/phishing_detector.py
 | Logistic Regression | 96.43% | 96.43% | 96.43% | 96.43% |
 | SVM | 91.07% | 85.78% | 98.47% | 91.69% |
 
-### Resume Requirements Achievement
-- **>90% Precision and Recall**: ACHIEVED (100% precision, 94.39% recall)
-- **>15% Improvement over Baseline**: ACHIEVED (19.08% improvement)
-- **Feature Engineering**: 1,022 features implemented
-- **Multiple ML Models**: Logistic Regression, Random Forest, SVM
-
 ## Project Structure
 
 ```
