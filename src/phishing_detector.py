@@ -313,15 +313,11 @@ def evaluate_models(models, scaler, X_test, y_test, baseline_accuracy):
         print(f"Recall:    {recall:.4f}")
         print(f"F1-Score:  {f1:.4f}")
         
-        # Check resume requirements
-        if precision > 0.90 and recall > 0.90:
-            print("✅ MEETS RESUME REQUIREMENT: >90% precision and recall!")
-        
         # Calculate improvement over baseline
         improvement = ((accuracy - baseline_accuracy) / baseline_accuracy) * 100
         print(f"Improvement over baseline: {improvement:.2f}%")
         if improvement > 15:
-            print("✅ MEETS RESUME REQUIREMENT: >15% improvement over baseline!")
+            print(" >15% improvement over baseline!")
     
     return results
 
@@ -469,7 +465,6 @@ def main():
     """
     print("🛡️ PHISHING DETECTION USING MACHINE LEARNING")
     print("=" * 60)
-    print("Implementing all resume requirements:")
     print("✅ Data collection and preprocessing")
     print("✅ Feature engineering (URL + text)")
     print("✅ Machine learning classifiers (LR, RF, SVM)")
