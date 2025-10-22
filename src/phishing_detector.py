@@ -325,19 +325,28 @@ def evaluate_models(models, scaler, X_test, y_test, baseline_accuracy):
     
     return results
 
-def create_visualizations(results):
+def create_visualizations(results, baseline_accuracy):
     """
     Step 8: Create model comparison visualizations
-    Generates charts to compare model performance
+    Generates charts to compare model performance including baseline
     """
-    print("\n📈 Creating model comparison visualizations...")
+    print("\nCreating model comparison visualizations...")
     
     # Set up the plotting style
     plt.style.use('default')
     fig, axes = plt.subplots(1, 2, figsize=(15, 6))
     fig.suptitle('Phishing Detection Model Performance Comparison', fontsize=16, fontweight='bold')
     
-    model_names = list(results.keys())
+    # Add baseline to results for visualization
+    results_with_baseline = results.copy()
+    results_with_baseline['Baseline'] = {
+        'accuracy': baseline_accuracy,
+        'precision': baseline_accuracy,  # Using accuracy as proxy for precision
+        'recall': baseline_accuracy,     # Using accuracy as proxy for recall
+        'f1_score': baseline_accuracy    # Using accuracy as proxy for f1
+    }
+    
+    model_names = list(results_with_baseline.keys())
     metrics = ['accuracy', 'precision', 'recall', 'f1_score']
     
     # 1. Model Comparison Bar Chart
@@ -345,7 +354,7 @@ def create_visualizations(results):
     width = 0.2
     
     for i, metric in enumerate(metrics):
-        values = [results[name][metric] for name in model_names]
+        values = [results_with_baseline[name][metric] for name in model_names]
         axes[0].bar(x + i*width, values, width, label=metric.replace('_', ' ').title())
     
     axes[0].set_xlabel('Models')
@@ -360,13 +369,13 @@ def create_visualizations(results):
     # Add value labels on bars
     for i, metric in enumerate(metrics):
         for j, name in enumerate(model_names):
-            height = results[name][metric]
+            height = results_with_baseline[name][metric]
             axes[0].text(j + i*width, height + 0.01, f'{height:.3f}', 
                         ha='center', va='bottom', fontsize=8)
     
     # 2. Precision vs Recall Comparison
-    precisions = [results[name]['precision'] for name in model_names]
-    recalls = [results[name]['recall'] for name in model_names]
+    precisions = [results_with_baseline[name]['precision'] for name in model_names]
+    recalls = [results_with_baseline[name]['recall'] for name in model_names]
     
     x_pos = np.arange(len(model_names))
     width = 0.35
@@ -394,7 +403,7 @@ def create_visualizations(results):
     plt.savefig('model_comparison.png', dpi=300, bbox_inches='tight')
     plt.show()
     
-    print("✅ Model comparison visualizations saved as 'model_comparison.png'")
+    print("Model comparison visualizations saved as 'model_comparison.png'")
 
 def save_models(models, scaler, tfidf_vectorizer):
     """
@@ -499,7 +508,7 @@ def main():
     results = evaluate_models(models, scaler, X_test, y_test, baseline_accuracy)
     
     # Step 7: Create visualizations
-    create_visualizations(results)
+    create_visualizations(results, baseline_accuracy)
     
     # Step 8: Save models
     save_models(models, scaler, tfidf_vectorizer)
