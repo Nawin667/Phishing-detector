@@ -1,6 +1,6 @@
 """
-Phishing Detection using Machine Learning - Beginner Friendly Version
-Meets all resume requirements with clear, educational code
+Phishing Detection using Machine Learning
+A comprehensive ML pipeline for detecting phishing attempts in text messages
 """
 
 import pandas as pd
@@ -25,7 +25,7 @@ def load_and_preprocess_data(file_path):
     Step 1: Load and preprocess the dataset
     This function handles data loading and basic cleaning
     """
-    print("📊 Loading and preprocessing data...")
+    print("Loading and preprocessing data...")
     
     # Load data with encoding handling
     try:
@@ -48,12 +48,12 @@ def load_and_preprocess_data(file_path):
     # Remove duplicates
     df = df.drop_duplicates(subset=['text'])
     
-    # Balance the dataset (as per resume requirement)
+    # Balance the dataset using stratified sampling
     label_counts = df['label'].value_counts()
     min_count = label_counts.min()
     
     if label_counts.max() > min_count * 1.5:  # If imbalanced
-        print("⚖️ Balancing dataset...")
+        print("Balancing dataset...")
         balanced_dfs = []
         for label in df['label'].unique():
             label_df = df[df['label'] == label]
@@ -264,12 +264,12 @@ def train_ml_models(X_train, y_train):
     # Train each model
     trained_models = {}
     for name, model in models.items():
-        print(f"  📊 Training {name}...")
+        print(f"  Training {name}...")
         model.fit(X_train_scaled, y_train)
         trained_models[name] = model
-        print(f"  ✅ {name} training complete!")
+        print(f"  {name} training complete!")
     
-    print("✅ All models trained successfully!")
+    print("All models trained successfully!")
     return trained_models, scaler
 
 def evaluate_models(models, scaler, X_test, y_test, baseline_accuracy):
@@ -543,9 +543,9 @@ def main():
     else:
         print("❌ >15% improvement over baseline: NOT ACHIEVED")
     
-    print("\n🚀 All resume requirements implemented successfully!")
-    print("📚 Code is beginner-friendly with clear explanations")
-    print("🎯 Ready for GitHub and portfolio!")
+    print("\nAll requirements implemented successfully!")
+    print("Code is beginner-friendly with clear explanations")
+    print("Ready for deployment!")
 
 if __name__ == "__main__":
     main()

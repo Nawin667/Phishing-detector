@@ -1,8 +1,8 @@
-# 🛡️ Phishing Detection using Machine Learning
+# Phishing Detection using Machine Learning
 
 A comprehensive machine learning system that detects phishing attempts in emails and text messages using advanced feature engineering and multiple ML algorithms.
 
-## 🎯 Project Overview
+## Project Overview
 
 This project implements a sophisticated phishing detection system that achieves:
 - **98.91% Precision** (excellent accuracy)
@@ -10,7 +10,7 @@ This project implements a sophisticated phishing detection system that achieves:
 - **17.52% Improvement** over baseline methods
 - **1,014 Engineered Features** for robust detection
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Python 3.8+
@@ -41,15 +41,15 @@ python src/phishing_detector.py
 ```
 
 **This single script does everything:**
-- ✅ Loads and preprocesses data
-- ✅ Creates 1,014 features
-- ✅ Trains 3 ML models
-- ✅ Evaluates performance
-- ✅ Creates visualizations
-- ✅ Saves models
-- ✅ Tests with example texts
+- Loads and preprocesses data
+- Creates 1,014 features
+- Trains 3 ML models
+- Evaluates performance
+- Creates visualizations
+- Saves models
+- Tests with example texts
 
-## 📊 Results
+## Results
 
 ### Performance Metrics
 | Model | Accuracy | Precision | Recall | F1-Score |
@@ -59,12 +59,12 @@ python src/phishing_detector.py
 | SVM | 91.07% | 85.78% | 98.47% | 91.69% |
 
 ### Resume Requirements Achievement
-- ✅ **>90% Precision and Recall**: ACHIEVED (100% precision, 94.39% recall)
-- ✅ **>15% Improvement over Baseline**: ACHIEVED (19.08% improvement)
-- ✅ **Feature Engineering**: 1,022 features implemented
-- ✅ **Multiple ML Models**: Logistic Regression, Random Forest, SVM
+- **>90% Precision and Recall**: ACHIEVED (100% precision, 94.39% recall)
+- **>15% Improvement over Baseline**: ACHIEVED (19.08% improvement)
+- **Feature Engineering**: 1,022 features implemented
+- **Multiple ML Models**: Logistic Regression, Random Forest, SVM
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 phishing-detector-v2/
@@ -80,7 +80,7 @@ phishing-detector-v2/
 └── download_datasets.sh         # Dataset download script
 ```
 
-## 🔧 Usage
+## Usage
 
 ### Run the Complete System
 ```bash
@@ -88,13 +88,13 @@ python src/phishing_detector.py
 ```
 
 **That's it!** This single script does everything:
-- ✅ Loads and preprocesses data
-- ✅ Creates 1,014 features
-- ✅ Trains 3 ML models
-- ✅ Evaluates performance
-- ✅ Creates visualizations
-- ✅ Saves models
-- ✅ Tests with examples
+- Loads and preprocesses data
+- Creates 1,014 features
+- Trains 3 ML models
+- Evaluates performance
+- Creates visualizations
+- Saves models
+- Tests with examples
 
 ## 🎓 Beginner-Friendly Design
 
@@ -106,7 +106,7 @@ This implementation combines educational clarity with professional results:
 - **Step-by-step**: Follow the complete ML pipeline
 - **Interactive examples**: Test with your own text
 
-### 🚀 **Resume Requirements Met**
+### **Requirements Met**
 - **Feature engineering**: URL + text + TF-IDF features
 - **High performance**: >90% precision and recall achieved
 - **Multiple algorithms**: LR, RF, SVM implemented
@@ -155,7 +155,7 @@ The system extracts **1,022 features** across three categories:
 - **Cross-validation**: Robust performance estimation
 - **Multiple Metrics**: Accuracy, Precision, Recall, F1-Score
 
-## 📈 Visualizations
+## Visualizations
 
 The project generates comprehensive visualizations:
 
@@ -166,7 +166,7 @@ The project generates comprehensive visualizations:
 - **ROC Curves**: True vs False positive rates
 - **Baseline Comparison**: Improvement visualization
 
-## 🎬 Live Demonstration
+## Live Demonstration
 
 The live demonstration is built into the main script! When you run:
 
@@ -181,7 +181,7 @@ python src/phishing_detector.py
 - Confidence scores
 - Complete ML pipeline demonstration
 
-## 📊 Dataset Information
+## Dataset Information
 
 ### Primary Dataset: spam.csv
 - **Size**: 5,572 messages
@@ -209,7 +209,7 @@ Input: "Hi Sarah, thanks for the meeting yesterday. Please find the project note
 Output: LEGITIMATE (confidence: 0.628)
 ```
 
-## 🛠️ Development
+## Development
 
 ### Adding New Features
 1. Modify `src/feature_extraction.py`
